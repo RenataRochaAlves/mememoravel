@@ -9,7 +9,7 @@ use App\Meme;
 class MemeController extends Controller
 {
     public function showAllMemes(){
-        $memes = Meme::all();
+        $memes = Meme::all()->sortByDesc('id');
 
         return response()->json($memes);
     }

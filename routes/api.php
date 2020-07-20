@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/meme', 'Api\MemeController@showAllMemes');
+Route::get('/memes', 'Api\MemeController@showAllMemes');
 
 Route::post('/meme', 'Api\MemeController@createMeme');
 
