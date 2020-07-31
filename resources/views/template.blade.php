@@ -92,8 +92,8 @@
             <iframe width="560" height="315" src="https://www.youtube.com/embed/O16uoBap-Vo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <h4>The Voice Loves Love</h4>
             <div class="date">
-                <h5>2020</h5>
                 <h6>29/07/2020</h6>
+                <h5>2020</h5>
             </div>
             <div class="info">
                 <div class="autor">
