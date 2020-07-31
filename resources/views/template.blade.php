@@ -9,177 +9,20 @@
 <body>
     <header>
         <div class="logo">
+            <svg id="infoicon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path d="M256 182.8c-12.7 0-21.8 5.4-21.8 13.3V303.7c0 6.8 9 13.6 21.8 13.6 12.2 0 22-6.8 22-13.6V196.1C278 188.1 268.2 182.8 256 182.8z"/>
+                <path d="M256 116.4c-13 0-23.2 9.3-23.2 20.1 0 10.7 10.2 20.3 23.2 20.3 12.7 0 22.9-9.6 22.9-20.3C278.9 125.7 268.7 116.4 256 116.4z"/>
+                <path d="M256 0C134.4 0 36 98.3 36 219.9c0 99.2 65.3 181.6 153.4 209.6l50 73.7C243.2 508.7 249.4 512 256 512s12.8-3.3 16.6-8.8l50-73.7C410.7 401.5 476 319.1 476 219.9 476 98.3 377.5 0 256 0zM304.6 393.1c-4.6 1.3-8.5 4.1-11.2 8L256 456.4l-37.5-55.2c-2.7-3.9-6.6-6.8-11.2-8C132.4 372.1 76 303.2 76 219.9 76 120.7 156.7 40 256 40s180 80.7 180 179.9C436 303.3 379.5 372.2 304.6 393.1z"/>
+            </svg>
             <h1>baú de memes</h1>
             <svg id="logout" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
                 <path d="m320 277.335938c-11.796875 0-21.332031 9.558593-21.332031 21.332031v85.335937c0 11.753906-9.558594 21.332032-21.335938 21.332032h-64v-320c0-18.21875-11.605469-34.496094-29.054687-40.554688l-6.316406-2.113281h99.371093c11.777344 0 21.335938 9.578125 21.335938 21.335937v64c0 11.773438 9.535156 21.332032 21.332031 21.332032s21.332031-9.558594 21.332031-21.332032v-64c0-35.285156-28.714843-63.99999975-64-63.99999975h-229.332031c-.8125 0-1.492188.36328175-2.28125.46874975-1.027344-.085937-2.007812-.46874975-3.050781-.46874975-23.53125 0-42.667969 19.13281275-42.667969 42.66406275v384c0 18.21875 11.605469 34.496093 29.054688 40.554687l128.386718 42.796875c4.351563 1.34375 8.679688 1.984375 13.226563 1.984375 23.53125 0 42.664062-19.136718 42.664062-42.667968v-21.332032h64c35.285157 0 64-28.714844 64-64v-85.335937c0-11.773438-9.535156-21.332031-21.332031-21.332031zm0 0"/>
                 <path d="m505.75 198.253906-85.335938-85.332031c-6.097656-6.101563-15.273437-7.9375-23.25-4.632813-7.957031 3.308594-13.164062 11.09375-13.164062 19.714844v64h-85.332031c-11.777344 0-21.335938 9.554688-21.335938 21.332032 0 11.777343 9.558594 21.332031 21.335938 21.332031h85.332031v64c0 8.621093 5.207031 16.40625 13.164062 19.714843 7.976563 3.304688 17.152344 1.46875 23.25-4.628906l85.335938-85.335937c8.339844-8.339844 8.339844-21.824219 0-30.164063zm0 0"/>
             </svg> 
         </div>
-
-        <div class="header">
-            <div class="search">
-                <input type="text" name="search" id="search" value="">
-                <img src="img/search.png" alt="busca">
-            </div>
-
-            <select name="year" id="year">
-                <option value="ano" disabled selected>Ano</option>
-                <option value="2020">2020</option>
-                <option value="2019">2019</option>
-                <option value="2018">2018</option>
-                <option value="2017">2017</option>
-                <option value="2016">2016</option>
-            </select>
-
-            <select name="order" id="order">
-                <option value="order" disabled selected>Ordenar</option>
-                <option value="newest">Mais recentes</option>
-                <option value="oldest">Mais antigos</option>
-                <option value="mostLiked">Mais curtidos</option>
-                <option value="lessLiked">Menos curtidos</option>
-            </select>
-        </div>   
     </header>
 
-    <main>
-        <article>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/O16uoBap-Vo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <h4>The Voice Loves Love</h4>
-            <div class="date">
-                <h5>2020</h5>
-                <h6>29/07/2020</h6>
-            </div>
-            <div class="info">
-                <div class="autor">
-                    <img src="img/avatar/018-user-17.png" alt="foto de perfil">
-                    <p>@amandamoreira</p>
-                </div>
-                <div class="buttons">
-                    <svg id="alert" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                        <path d="M501.4 384L320.5 51.5c-29.1-48.9-99.9-49-129 0L10.6 384c-29.7 50 6.3 113.3 64.5 113.3h361.7C495 497.2 531.1 434 501.4 384zM256 437.2c-16.5 0-30-13.5-30-30 0-16.5 13.5-30 30-30 16.5 0 30 13.5 30 30C286 423.8 272.5 437.2 256 437.2zM286 317.2c0 16.5-13.5 30-30 30 -16.5 0-30-13.5-30-30v-150c0-16.5 13.5-30 30-30 16.5 0 30 13.5 30 30V317.2z"/>
-                    </svg>
-                    <svg id="heart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                        <path d="M376 30c-27.8 0-53.3 8.8-75.7 26.2 -21.5 16.6-35.9 37.9-44.3 53.3 -8.4-15.4-22.8-36.6-44.3-53.3C189.3 38.8 163.8 30 136 30 58.5 30 0 93.4 0 177.5c0 90.9 72.9 153 183.4 247.1 18.8 16 40 34.1 62.1 53.4C248.4 480.6 252.1 482 256 482s7.6-1.4 10.5-4c22.1-19.3 43.3-37.4 62.1-53.4C439.1 330.5 512 268.4 512 177.5 512 93.4 453.5 30 376 30z"/>
-                    </svg>                  
-                </div>
-            </div>     
-        </article>
-
-        <article>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/O16uoBap-Vo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <h4>The Voice Loves Love</h4>
-            <div class="date">
-                <h5>2020</h5>
-                <h6>29/07/2020</h6>
-            </div>
-            <div class="info">
-                <div class="autor">
-                    <img src="img/avatar/018-user-17.png" alt="foto de perfil">
-                    <p>@amandamoreira</p>
-                </div>
-                <div class="buttons">
-                    <svg id="alert" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                        <path d="M501.4 384L320.5 51.5c-29.1-48.9-99.9-49-129 0L10.6 384c-29.7 50 6.3 113.3 64.5 113.3h361.7C495 497.2 531.1 434 501.4 384zM256 437.2c-16.5 0-30-13.5-30-30 0-16.5 13.5-30 30-30 16.5 0 30 13.5 30 30C286 423.8 272.5 437.2 256 437.2zM286 317.2c0 16.5-13.5 30-30 30 -16.5 0-30-13.5-30-30v-150c0-16.5 13.5-30 30-30 16.5 0 30 13.5 30 30V317.2z"/>
-                    </svg>
-                    <svg id="heart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                        <path d="M376 30c-27.8 0-53.3 8.8-75.7 26.2 -21.5 16.6-35.9 37.9-44.3 53.3 -8.4-15.4-22.8-36.6-44.3-53.3C189.3 38.8 163.8 30 136 30 58.5 30 0 93.4 0 177.5c0 90.9 72.9 153 183.4 247.1 18.8 16 40 34.1 62.1 53.4C248.4 480.6 252.1 482 256 482s7.6-1.4 10.5-4c22.1-19.3 43.3-37.4 62.1-53.4C439.1 330.5 512 268.4 512 177.5 512 93.4 453.5 30 376 30z"/>
-                    </svg>                  
-                </div>
-            </div>     
-        </article>
-
-        <article>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/O16uoBap-Vo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <h4>The Voice Loves Love</h4>
-            <div class="date">
-                <h6>29/07/2020</h6>
-                <h5>2020</h5>
-            </div>
-            <div class="info">
-                <div class="autor">
-                    <img src="img/avatar/018-user-17.png" alt="foto de perfil">
-                    <p>@amandamoreira</p>
-                </div>
-                <div class="buttons">
-                    <svg id="alert" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                        <path d="M501.4 384L320.5 51.5c-29.1-48.9-99.9-49-129 0L10.6 384c-29.7 50 6.3 113.3 64.5 113.3h361.7C495 497.2 531.1 434 501.4 384zM256 437.2c-16.5 0-30-13.5-30-30 0-16.5 13.5-30 30-30 16.5 0 30 13.5 30 30C286 423.8 272.5 437.2 256 437.2zM286 317.2c0 16.5-13.5 30-30 30 -16.5 0-30-13.5-30-30v-150c0-16.5 13.5-30 30-30 16.5 0 30 13.5 30 30V317.2z"/>
-                    </svg>
-                    <svg id="heart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                        <path d="M376 30c-27.8 0-53.3 8.8-75.7 26.2 -21.5 16.6-35.9 37.9-44.3 53.3 -8.4-15.4-22.8-36.6-44.3-53.3C189.3 38.8 163.8 30 136 30 58.5 30 0 93.4 0 177.5c0 90.9 72.9 153 183.4 247.1 18.8 16 40 34.1 62.1 53.4C248.4 480.6 252.1 482 256 482s7.6-1.4 10.5-4c22.1-19.3 43.3-37.4 62.1-53.4C439.1 330.5 512 268.4 512 177.5 512 93.4 453.5 30 376 30z"/>
-                    </svg>                  
-                </div>
-            </div>     
-        </article>
-
-        <article>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/O16uoBap-Vo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <h4>The Voice Loves Love</h4>
-            <div class="date">
-                <h5>2020</h5>
-                <h6>29/07/2020</h6>
-            </div>
-            <div class="info">
-                <div class="autor">
-                    <img src="img/avatar/018-user-17.png" alt="foto de perfil">
-                    <p>@amandamoreira</p>
-                </div>
-                <div class="buttons">
-                    <svg id="alert" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                        <path d="M501.4 384L320.5 51.5c-29.1-48.9-99.9-49-129 0L10.6 384c-29.7 50 6.3 113.3 64.5 113.3h361.7C495 497.2 531.1 434 501.4 384zM256 437.2c-16.5 0-30-13.5-30-30 0-16.5 13.5-30 30-30 16.5 0 30 13.5 30 30C286 423.8 272.5 437.2 256 437.2zM286 317.2c0 16.5-13.5 30-30 30 -16.5 0-30-13.5-30-30v-150c0-16.5 13.5-30 30-30 16.5 0 30 13.5 30 30V317.2z"/>
-                    </svg>
-                    <svg id="heart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                        <path d="M376 30c-27.8 0-53.3 8.8-75.7 26.2 -21.5 16.6-35.9 37.9-44.3 53.3 -8.4-15.4-22.8-36.6-44.3-53.3C189.3 38.8 163.8 30 136 30 58.5 30 0 93.4 0 177.5c0 90.9 72.9 153 183.4 247.1 18.8 16 40 34.1 62.1 53.4C248.4 480.6 252.1 482 256 482s7.6-1.4 10.5-4c22.1-19.3 43.3-37.4 62.1-53.4C439.1 330.5 512 268.4 512 177.5 512 93.4 453.5 30 376 30z"/>
-                    </svg>                  
-                </div>
-            </div>     
-        </article>
-
-        <article>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/O16uoBap-Vo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <h4>The Voice Loves Love</h4>
-            <div class="date">
-                <h5>2020</h5>
-                <h6>29/07/2020</h6>
-            </div>
-            <div class="info">
-                <div class="autor">
-                    <img src="img/avatar/018-user-17.png" alt="foto de perfil">
-                    <p>@amandamoreira</p>
-                </div>
-                <div class="buttons">
-                    <svg id="alert" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                        <path d="M501.4 384L320.5 51.5c-29.1-48.9-99.9-49-129 0L10.6 384c-29.7 50 6.3 113.3 64.5 113.3h361.7C495 497.2 531.1 434 501.4 384zM256 437.2c-16.5 0-30-13.5-30-30 0-16.5 13.5-30 30-30 16.5 0 30 13.5 30 30C286 423.8 272.5 437.2 256 437.2zM286 317.2c0 16.5-13.5 30-30 30 -16.5 0-30-13.5-30-30v-150c0-16.5 13.5-30 30-30 16.5 0 30 13.5 30 30V317.2z"/>
-                    </svg>
-                    <svg id="heart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                        <path d="M376 30c-27.8 0-53.3 8.8-75.7 26.2 -21.5 16.6-35.9 37.9-44.3 53.3 -8.4-15.4-22.8-36.6-44.3-53.3C189.3 38.8 163.8 30 136 30 58.5 30 0 93.4 0 177.5c0 90.9 72.9 153 183.4 247.1 18.8 16 40 34.1 62.1 53.4C248.4 480.6 252.1 482 256 482s7.6-1.4 10.5-4c22.1-19.3 43.3-37.4 62.1-53.4C439.1 330.5 512 268.4 512 177.5 512 93.4 453.5 30 376 30z"/>
-                    </svg>                  
-                </div>
-            </div>     
-        </article>
-
-        <article>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/O16uoBap-Vo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <h4>The Voice Loves Love</h4>
-            <div class="date">
-                <h5>2020</h5>
-                <h6>29/07/2020</h6>
-            </div>
-            <div class="info">
-                <div class="autor">
-                    <img src="img/avatar/018-user-17.png" alt="foto de perfil">
-                    <p>@amandamoreira</p>
-                </div>
-                <div class="buttons">
-                    <svg id="alert" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                        <path d="M501.4 384L320.5 51.5c-29.1-48.9-99.9-49-129 0L10.6 384c-29.7 50 6.3 113.3 64.5 113.3h361.7C495 497.2 531.1 434 501.4 384zM256 437.2c-16.5 0-30-13.5-30-30 0-16.5 13.5-30 30-30 16.5 0 30 13.5 30 30C286 423.8 272.5 437.2 256 437.2zM286 317.2c0 16.5-13.5 30-30 30 -16.5 0-30-13.5-30-30v-150c0-16.5 13.5-30 30-30 16.5 0 30 13.5 30 30V317.2z"/>
-                    </svg>
-                    <svg id="heart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                        <path d="M376 30c-27.8 0-53.3 8.8-75.7 26.2 -21.5 16.6-35.9 37.9-44.3 53.3 -8.4-15.4-22.8-36.6-44.3-53.3C189.3 38.8 163.8 30 136 30 58.5 30 0 93.4 0 177.5c0 90.9 72.9 153 183.4 247.1 18.8 16 40 34.1 62.1 53.4C248.4 480.6 252.1 482 256 482s7.6-1.4 10.5-4c22.1-19.3 43.3-37.4 62.1-53.4C439.1 330.5 512 268.4 512 177.5 512 93.4 453.5 30 376 30z"/>
-                    </svg>                  
-                </div>
-            </div>     
-        </article>
-    </main>
+    @yield('content')
 
     <footer>
         <nav>

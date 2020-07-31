@@ -55,9 +55,16 @@ body {
 .logo svg {
     width: 25px;
     position: absolute;
-    right: 20px;
     fill: #afafaf;
     transition: ease 0.5s;
+}
+
+#infoicon {
+    left: 20px;
+}
+
+#logout {
+    right: 20px;
 }
 
 .logo svg:hover {
@@ -77,8 +84,6 @@ body {
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding-left: 80px;
-    padding-right: 80px;
     margin-bottom: 50px;
 }
 
@@ -326,7 +331,7 @@ footer svg:hover {
 }
 
 @media (max-width: 480px){
-    .header, main {
+    main {
         padding-left: 20px;
         padding-right: 20px;
     }
