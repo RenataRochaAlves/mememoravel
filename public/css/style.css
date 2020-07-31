@@ -358,6 +358,30 @@ footer svg:hover {
     color: #a4b2b8;  
  }
 
+ .form-check {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+ }
+
+ .form-check div {
+     display: flex;
+     align-items: center;
+ }
+
+ input[type="checkbox" i] {
+     width: 20px !important;
+     margin-bottom: 0px !important;
+}
+
+.form-check-label {
+    color: #f7c65c;
+}
+
+ .btn-link {
+     color: #ed6263;
+ }
+
 /* MEDIA QUERYS */
 
 @media (max-width: 970px){
@@ -436,7 +460,7 @@ footer svg:hover {
     }
 
     #register-card form input {
-        width: 200px;
+        width: 230px;
         font-size: 1rem;
     }
 }
