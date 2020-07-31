@@ -401,6 +401,15 @@ footer svg:hover {
     .header select {
         width: calc(100% / 2 - 20px);
     }
+
+    #register-card form input {
+        width: 250px;
+        font-size: 1.1rem;
+    }
+
+    #register-card form button {
+        font-size: 1.2rem;
+    }
 }
 
 @media (max-width: 480px){
@@ -420,5 +429,14 @@ footer svg:hover {
 
     footer svg {
         width: 20px;
+    }
+
+    #register-card {
+        padding: 30px;
+    }
+
+    #register-card form input {
+        width: 200px;
+        font-size: 1rem;
     }
 }
