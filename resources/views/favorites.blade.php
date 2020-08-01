@@ -1,5 +1,5 @@
 @extends('template')
-@section('title', 'Perfil | Baú de Memes')
+@section('title', 'Favoritos | Baú de Memes')
 
 @section('content')
     <main id="profile">
