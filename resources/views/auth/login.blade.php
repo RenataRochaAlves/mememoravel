@@ -7,7 +7,7 @@
 
     <article id="register-card">
 
-        <h3>Cadastre-se!</h3>
+        <h3>Login</h3>
 
         <form method="POST" action="{{ route('login') }}">
             @csrf
