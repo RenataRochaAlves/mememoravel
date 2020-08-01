@@ -382,6 +382,54 @@ footer svg:hover {
      color: #ed6263;
  }
 
+ /* PROFILE */
+
+ .profile-info {
+    width: 100%;
+    background-color: #34434d;
+    padding: 10px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 1px 3px 20px #1c2529;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+ }
+
+ .profile-info img {
+     width: 100px;
+ }
+
+ .profile-info div {
+     width: auto;
+     padding-left: 30px;
+     padding-right: 30px;
+ }
+
+ .profile-info h3 {
+     font-size: 2rem;
+     margin-bottom: 5px;
+     color: #dae1e4;
+ }
+
+ .profile-info h4 {
+     font-size: 1.2rem;
+ }
+
+ .profile-info svg {
+    width: 25px;
+    fill: #b4c2c8;
+    transition: ease 0.5s;
+}
+
+.profile-info svg:hover {
+    fill: #dae1e4;
+}
+
 /* MEDIA QUERYS */
 
 @media (max-width: 970px){
@@ -434,6 +482,14 @@ footer svg:hover {
     #register-card form button {
         font-size: 1.2rem;
     }
+
+    .profile-info img {
+        width: 80px;
+    }
+
+    .profile-info {
+        margin-bottom: 15px;
+    }
 }
 
 @media (max-width: 480px){
@@ -462,5 +518,31 @@ footer svg:hover {
     #register-card form input {
         width: 230px;
         font-size: 1rem;
+    }
+
+    .profile-info img {
+        width: 60px;
+    }
+   
+    .profile-info div {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+   
+    .profile-info h3 {
+        font-size: 1.3rem;
+    }
+   
+    .profile-info h4 {
+        font-size: 1rem;
+    }
+
+    .profile-info svg {
+        width: 20px;
+    }
+
+    .profile-info {
+        padding-top: 30px;
+        padding-bottom: 30px;
     }
 }
