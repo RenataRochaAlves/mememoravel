@@ -61,7 +61,7 @@
                 </div>
                 <div class="avatars">
                     @for($i = 1; $i <= 50; $i++)
-                        <img src="img/avatar/avatar{{ $i }}.png" alt="avatar">
+                        <img id="avatar{{ $i }}" src="img/avatar/avatar{{ $i }}.png" alt="avatar">
                     @endfor
                 </div>
             </div>
