@@ -288,7 +288,8 @@ footer svg:hover {
 /* REGISTER */
 
 #register {
-    height: calc(100% - 60px);
+    min-width: calc(100% - 60px);
+    max-height: 100%;
     background-image: url(../img/pattern.jpg);
     background-size: cover;
     background-attachment: fixed;
@@ -326,7 +327,7 @@ footer svg:hover {
     box-shadow: 1px 3px 20px #181f22;
 }
 
-#register-card form button {
+.btn-primary {
     width: 100%;
     font-size: 1.3rem;
     font-family: semibold;
@@ -339,7 +340,7 @@ footer svg:hover {
     transition: ease 0.5s;
 }
 
-#register-card form button:hover {
+.btn-primary:hover {
     background-color: #6fd19d;
 }
 
@@ -502,6 +503,19 @@ footer svg:hover {
 
 .denounce label, .denounce input {
     margin-bottom: 20px;
+}
+
+/* ERRO */
+
+.erro a {
+    font-size: 1.1rem;
+    color: #f7c65c;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.erro p {
+    text-align: center;
 }
 
 /* MEDIA QUERYS */

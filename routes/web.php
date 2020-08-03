@@ -37,6 +37,10 @@ Route::get('/denouncememe', function(){
     return view('denouncememe');
 });
 
+Route::get('/erro', function(){
+    return view('erro');
+});
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
