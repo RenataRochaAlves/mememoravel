@@ -3,7 +3,7 @@
 @section('title', 'Login | Baú de Memes')
 
 @section('content')
-<main id="register">
+<main id="register" class="editprofile add meme">
 
     <article id="register-card">
 
@@ -57,10 +57,11 @@
                 <div class="col-md-8 offset-md-4">
                     <button type="submit" class="btn btn-primary">
                         {{ __('Login') }}
-                    </button>
-
-                    
+                    </button>                    
                 </div>
+            </div>
+            <div class="link">
+                <a href="/register">Ou cadastre-se</a>
             </div>
         </form>
     </article>

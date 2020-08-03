@@ -3,7 +3,7 @@
 @section('title', 'Denunciar Meme | Baú de Memes')
 
 @section('content')
-<main id="register" class="editprofile">
+<main id="register" class="editprofile add meme">
 
     <article id="register-card" class="erro">
 

@@ -3,7 +3,7 @@
 @section('title', 'Cadastro | Baú de Memes')
 
 @section('content')
-<main id="register">
+<main id="register" class="editprofile add meme">
 
     <article id="register-card">
 
@@ -60,6 +60,9 @@
                         Enviar
                     </button>
                 </div>
+            </div>
+            <div class="link">
+                <a href="/login">Ou faça login</a>
             </div>
         </form>
     </article>

@@ -384,6 +384,21 @@ footer svg:hover {
      color: #ed6263;
  }
 
+ #register .link {
+     text-align: center;
+     margin-top: 20px;
+ }
+
+ #register .link a {
+    color: #a4b2b8;
+    font-size: 1.1rem;
+    transition: ease 0.5s;
+ }
+
+ #register .link a:hover {
+     color: #f7c65c;
+ }
+
  /* PROFILE */
 
  .profile-info {
