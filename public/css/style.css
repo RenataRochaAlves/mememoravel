@@ -62,7 +62,7 @@ body {
     left: 20px;
 }
 
-#logout {
+#logout, #login {
     right: 20px;
 }
 
