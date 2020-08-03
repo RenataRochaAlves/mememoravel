@@ -29,6 +29,14 @@ Route::get('/editprofile', function(){
     return view('editprofile');
 });
 
+Route::get('/addmeme', function(){
+    return view('addmeme');
+});
+
+Route::get('/denouncememe', function(){
+    return view('denouncememe');
+});
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

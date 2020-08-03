@@ -33,7 +33,7 @@ html {
 
 body {
     background-color: #243137;
-    height: 100vh;
+    min-height: 100vh;
     position: relative;
 }
 
@@ -291,6 +291,7 @@ footer svg:hover {
     height: calc(100% - 60px);
     background-image: url(../img/pattern.jpg);
     background-size: cover;
+    background-attachment: fixed;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -480,6 +481,29 @@ footer svg:hover {
     border: 2px solid #f7c65c;
 }
 
+/* DENOUNCE MEME */
+
+.denounce div, .denounce p {
+    width: 350px;
+    margin-bottom: 8px;
+}
+
+.denounce h4 {
+    font-size: 1.3rem;
+}
+
+.denounce label {
+    font-size: 1.2rem;
+}
+
+.denounce ::-webkit-input-placeholder {
+    font-size: 1.1rem;
+}
+
+.denounce label, .denounce input {
+    margin-bottom: 20px;
+}
+
 /* MEDIA QUERYS */
 
 @media (max-width: 970px){
@@ -611,5 +635,13 @@ footer svg:hover {
 
     #avatar49, #avatar50 {
         display: none;
+    }
+
+    .denounce div, .denounce p, .denounce h4, .denounce {
+        width: 250px;
+    }
+
+    .denounce {
+        align-self: center;
     }
 }
