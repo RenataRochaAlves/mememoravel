@@ -37,7 +37,7 @@
             </div>
             <div class="info">
                 <div class="autor">
-                    <img src="img/avatar/018-user-17.png" alt="foto de perfil">
+                    <img src="img/avatar/avatar17.png" alt="foto de perfil">
                     <p>@amandamoreira</p>
                 </div>
                 <div class="buttons">
