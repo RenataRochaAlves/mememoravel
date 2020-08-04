@@ -466,6 +466,15 @@ footer svg:hover {
     fill: #dae1e4;
 }
 
+.erro-profile {
+    width: 100%;
+}
+
+.erro-profile h4 {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
 /* EDIT PROFILE */
 .editprofile {
     padding-bottom: 50px;

@@ -67,7 +67,6 @@ class RegisterController extends Controller
     {
         $rand = rand(1,50);
         $avatar = "img/avatar/avatar$rand.png";
-        // dd($avatar);
         
         return User::create([
             'name' => $data['name'],

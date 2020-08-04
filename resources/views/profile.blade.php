@@ -5,10 +5,10 @@
     <main id="profile">
 
         <div class="profile-info">
-            <img src="img/avatar/018-user-17.png" alt="foto perfil">
+            <img src="{{ Auth::user()->avatar }}" alt="{{ Auth::user()->name }}">
             <div>
-                <h3>Amanda Moreira</h3>
-                <h4>@amandamoreira</h4>
+                <h3>{{ Auth::user()->name }}</h3>
+                <h4>@ {{ Auth::user()->username }} </h4>
             </div>
             <svg id="edit" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 383.9 383.9">
                 <polygon points="0 303.9 0 383.9 80 383.9 316.1 147.9 236.1 67.9 "/>
@@ -40,7 +40,11 @@
             </select>
         </div> 
 
-        <article>
+        <div class="erro-profile">
+            <h4>Ooops! Você ainda não possui nenhum meme cadastrado ):</h4>
+        </div>
+
+        {{--  <article>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/O16uoBap-Vo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <h4>The Voice Loves Love</h4>
             <div class="date">
@@ -61,6 +65,6 @@
                     </svg>                  
                 </div>
             </div>     
-        </article>
+        </article>  --}}
     </main>
 @endsection

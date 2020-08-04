@@ -10,8 +10,14 @@ class Meme extends Model
         'name',
         'link',
         'year',
-        'upload_date'
+        'upload_date',
+        'user_id'
     ];
 
     protected $hidden = ['created_at', 'updated_at'];
+
+    public function users()
+    {
+        return $this->belongsTo('App\User');
+    }
 }

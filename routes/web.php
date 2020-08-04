@@ -33,6 +33,7 @@ Route::get('/editprofile', function(){
 Route::get('/addmeme', function(){
     return view('addmeme');
 });
+Route::post('/addmeme', 'MemeController@create');
 
 Route::get('/denouncememe', function(){
     return view('denouncememe');
