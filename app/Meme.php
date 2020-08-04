@@ -20,4 +20,9 @@ class Meme extends Model
     {
         return $this->belongsTo('App\User');
     }
+
+    public function denounces()
+    {
+        return $this->hasMany('App\Denounce');
+    }
 }

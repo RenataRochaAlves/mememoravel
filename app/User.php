@@ -41,4 +41,9 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\Meme');
     }
+
+    public function denounces()
+    {
+        return $this->hasMany('App\Denounce');
+    }
 }
