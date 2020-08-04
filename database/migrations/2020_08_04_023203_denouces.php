@@ -17,13 +17,13 @@ class Denouces extends Migration
             $table->id();
             $table->foreignId('id_post')->constrained('memes');
             $table->foreignId('id_denunciator')->constrained('users');
-            $table->boolean('spam');
-            $table->boolean('nudity');
-            $table->boolean('violence');
-            $table->boolean('hate');
-            $table->boolean('suicide');
-            $table->boolean('other');
-            $table->string('text-other')->nullable();
+            $table->string('spam')->nullable();
+            $table->string('nudity')->nullable();
+            $table->string('violence')->nullable();
+            $table->string('hate')->nullable();
+            $table->string('suicide')->nullable();
+            $table->string('other')->nullable();
+            $table->string('text_other')->nullable();
             $table->timestamps();
         });
     }

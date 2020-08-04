@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Meme;
+use App\Denounce;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -45,5 +46,22 @@ class MemeController extends Controller
         $meme = Meme::find($id);
 
         return view('denouncememe', compact('meme'));
+    }
+
+    public function createdenounce(Request $request, $id)
+    {
+        $denounce = new Denounce();
+        $denounce->id_post = $id;
+        $denounce->id_denunciator = Auth::user()->id;
+        $denounce->spam = $request->spam;
+        $denounce->nudity = $request->nudity;
+        $denounce->violence = $request->violence;
+        $denounce->hate = $request->hate;
+        $denounce->suicide = $request->suicide;
+        $denounce->other = $request->other;
+        $denounce->text_other = $request->text_other;
+        $denounce->save();
+
+        return redirect('/');
     }
 }

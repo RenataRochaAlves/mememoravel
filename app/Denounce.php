@@ -15,7 +15,7 @@ class Denounce extends Model
         'hate',
         'suicide',
         'other',
-        'text-other'
+        'text_other'
     ];
 
     public function meme()

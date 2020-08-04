@@ -36,6 +36,7 @@ Route::get('/addmeme', function(){
 Route::post('/addmeme', 'MemeController@create');
 
 Route::get('/denouncememe/{id}', 'MemeController@newdenounce');
+Route::post('/denouncememe/{id}', 'MemeController@createdenounce');
 
 Route::get('/erro', function(){
     return view('erro');

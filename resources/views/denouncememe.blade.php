@@ -39,7 +39,7 @@
             <div>
                 <input type="checkbox" id="other" name="other" value="other">
                 <label for="other">Outro motivo:</label><br>
-                <input type="text" id="text-other" name="text-other" placeholder="Escreva aqui o motivo da sua denúncia"><br>
+                <input type="text" id="text_other" name="text_other" placeholder="Escreva aqui o motivo da sua denúncia"><br>
             </div>
             
             <p>Sua denúncia ajuda o Baú de Memes a continuar seguro e divertido para todo mundo :)</p>
