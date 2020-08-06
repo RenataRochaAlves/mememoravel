@@ -1,11 +1,12 @@
-var iframe = document.querySelector('iframe').style.display = "none";
+var iframe = document.querySelector('iframe');
+iframe.style.display = "none";
 var link = document.getElementById('link');
 
 function showVideo(key) {
-    let embed = "https://www.youtube.com/embed/" . key;
-    
-    iframe.style.display = "block";
+    let embed = "https://www.youtube.com/embed/" + key;
+
     iframe.src = embed;
+    iframe.style.display = "block";
 }
 
 link.onchange = function(evt){
@@ -13,10 +14,9 @@ link.onchange = function(evt){
     let match = link.value.match(regexp);
 
     if(match != null && match.length == 3){
-        console.log('pelo menos ate aqui deu certo')
-        // showVideo(match[2]);
+        showVideo(match[2]);
     } else {
-        console.log('formato errado');
+        iframe.style.display = "none";
     }
 }
 
