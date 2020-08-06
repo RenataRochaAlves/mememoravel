@@ -94,4 +94,5 @@
         </nav>
     </footer>
 </body>
+@yield('javascript')
 </html>

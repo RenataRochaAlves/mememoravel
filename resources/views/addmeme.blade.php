@@ -62,5 +62,8 @@
         </form>
     </article>
 </main>
-<script src="js/addmeme.js"></script>
+@endsection
+
+@section('javascript')
+    <script src="js/addmeme.js"></script>
 @endsection
