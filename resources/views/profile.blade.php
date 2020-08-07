@@ -10,10 +10,13 @@
                 <h3>{{ Auth::user()->name }}</h3>
                 <h4>@ {{ Auth::user()->username }} </h4>
             </div>
-            <svg id="edit" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 383.9 383.9">
-                <polygon points="0 303.9 0 383.9 80 383.9 316.1 147.9 236.1 67.9 "/>
-                <path d="M377.7 56.1L327.9 6.2c-8.3-8.3-21.9-8.3-30.2 0l-39 39 80 80 39-39C386 77.9 386 64.4 377.7 56.1z"/>
-            </svg>
+            <a href="/editprofile">
+                <svg id="edit" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 383.9 383.9">
+                    <polygon points="0 303.9 0 383.9 80 383.9 316.1 147.9 236.1 67.9 "/>
+                    <path d="M377.7 56.1L327.9 6.2c-8.3-8.3-21.9-8.3-30.2 0l-39 39 80 80 39-39C386 77.9 386 64.4 377.7 56.1z"/>
+                </svg>
+            </a>
+            
         </div>
 
         <div class="header">
