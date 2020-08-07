@@ -29,6 +29,7 @@ Route::get('/favorites', function(){
 Route::get('/editprofile', function(){
     return view('editprofile');
 });
+Route::post('/editprofile', 'Auth\EditUserController@edit');
 
 Route::get('/addmeme', function(){
     return view('addmeme');

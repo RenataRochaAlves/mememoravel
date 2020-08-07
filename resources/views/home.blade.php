@@ -29,7 +29,7 @@
         </div> 
 
         <article>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/O16uoBap-Vo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/O16uoBap-Vo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <h4>The Voice Loves Love</h4>
             <div class="date">
                 <h6>29/07/2020</h6>
@@ -52,4 +52,6 @@
         </article>
     </main>
 @endsection
-    
+@section('javascript')
+    <script src="js/home.js"></script>
+@endsection

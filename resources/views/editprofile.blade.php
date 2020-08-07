@@ -9,7 +9,7 @@
 
         <h3>Editar Perfil</h3>
 
-        <form method="POST" action="{{ route('register') }}">
+        <form method="POST" action="/editprofile">
             @csrf
 
             <div class="form-group row">
@@ -70,7 +70,7 @@
                 <div class="edit-avatar">
                     <p>Alterar Avatar</p>
                     <img id="avatar" src="{{ Auth::user()->avatar }}" alt="foto perfil">
-                    <input type="text" id="avatar_input" value="{{ Auth::user()->avatar }}">
+                    <input type="text" name="avatar" id="avatar_input" value="{{ Auth::user()->avatar }}">
                 </div>
                 <div class="avatars">
                     @for($i = 1; $i <= 50; $i++)
