@@ -15,7 +15,7 @@
             @csrf
 
             <div class="form-group row">
-                <div class="col-md-6">
+                <div id="link_div" class="col-md-6">
                     <input id="link" type="text" class="form-control @error('link') is-invalid @enderror" name="link" value="{{ old('link') }}" required autocomplete="link" autofocus placeholder="Link do vídeo">
 
                     @error('link')
