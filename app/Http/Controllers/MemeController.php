@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Meme;
 use App\Denounce;
+use App\Favorites;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -41,14 +42,14 @@ class MemeController extends Controller
         return redirect('/profile');
     }
 
-    public function newdenounce(Request $request, $id)
+    public function newDenounce(Request $request, $id)
     {
         $meme = Meme::find($id);
 
         return view('denouncememe', compact('meme'));
     }
 
-    public function createdenounce(Request $request, $id)
+    public function createDenounce(Request $request, $id)
     {
         $denounce = new Denounce();
         $denounce->id_post = $id;
@@ -63,5 +64,15 @@ class MemeController extends Controller
         $denounce->save();
 
         return redirect('/');
+    }
+
+    public function addToFavorites(Request $request, $id)
+    {
+        $favorite = new Favorites();
+        $favorite->user_id = Auth::user()->id;
+        $favorite->meme_id = $id;
+        $favorite->save();
+
+        return('ok');
     }
 }

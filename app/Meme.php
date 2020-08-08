@@ -25,4 +25,9 @@ class Meme extends Model
     {
         return $this->hasMany('App\Denounce');
     }
+
+    public function favorites()
+    {
+        return $this->hasMany('App\Favorites');
+    }
 }

@@ -37,18 +37,6 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    // public function messages()
-    // {
-    //     return [
-    //         'name.required' => 'O campo é obrigatório',
-    //         'email.required' => 'O campo é obrigatório',
-    //         'username.required' => 'O campo é obrigatório',
-    //         'password.required' => 'O campo é obrigatório',
-    //         'email.unique:users' => 'O e-mail já foi cadastrado',
-    //         'username.unique:users' => 'O username já foi cadastrado',
-    //         'password.confirmed' => 'A senha e a confirmação precisam ser iguais'
-    //     ];
-    // }
 
     public function memes()
     {
@@ -58,5 +46,10 @@ class User extends Authenticatable
     public function denounces()
     {
         return $this->hasMany('App\Denounce');
+    }
+
+    public function favorites()
+    {
+        return $this->hasMany('App\Favorites');
     }
 }
