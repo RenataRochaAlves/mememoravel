@@ -61,25 +61,47 @@ function showMemes(memes){
 
         let div_buttons = document.createElement('div');
         div_buttons.setAttribute('class', 'buttons');
+        div_buttons.style.display = "flex";
 
-        let alert = document.createElement('svg');
-        alert.setAttribute('id', 'alert');
-        alert.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
-        alert.setAttribute('viewBox', '0 0 512 512');
-        let alert_path = document.createElement('path');
-        alert_path.setAttribute('d', 'M501.4 384L320.5 51.5c-29.1-48.9-99.9-49-129 0L10.6 384c-29.7 50 6.3 113.3 64.5 113.3h361.7C495 497.2 531.1 434 501.4 384zM256 437.2c-16.5 0-30-13.5-30-30 0-16.5 13.5-30 30-30 16.5 0 30 13.5 30 30C286 423.8 272.5 437.2 256 437.2zM286 317.2c0 16.5-13.5 30-30 30 -16.5 0-30-13.5-30-30v-150c0-16.5 13.5-30 30-30 16.5 0 30 13.5 30 30V317.2z');
-        alert.append(alert_path);
+        let link_alert = document.createElement('a');
+        link_alert.setAttribute('href', '/denouncememe/' + memes[meme]['id']);
 
-        let heart = document.createElement('svg');
-        heart.setAttribute('id', 'heart');
-        heart.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
-        heart.setAttribute('viewBox', '0 0 512 512');
-        let heart_path = document.createElement('path');
-        heart_path.setAttribute('d', 'M376 30c-27.8 0-53.3 8.8-75.7 26.2 -21.5 16.6-35.9 37.9-44.3 53.3 -8.4-15.4-22.8-36.6-44.3-53.3C189.3 38.8 163.8 30 136 30 58.5 30 0 93.4 0 177.5c0 90.9 72.9 153 183.4 247.1 18.8 16 40 34.1 62.1 53.4C248.4 480.6 252.1 482 256 482s7.6-1.4 10.5-4c22.1-19.3 43.3-37.4 62.1-53.4C439.1 330.5 512 268.4 512 177.5 512 93.4 453.5 30 376 30z');
-        heart.append(heart_path);
+        var svgNS = "http://www.w3.org/2000/svg";  
+        var alert = document.createElementNS(svgNS,"svg"); 
+        alert.setAttributeNS(null,"id","alert");
+        alert.setAttributeNS(null,"viewBox", "0 0 512 512");
+        var alert_path = document.createElementNS(svgNS, "path");
+        alert_path.setAttributeNS(null,"d","M501.4 384L320.5 51.5c-29.1-48.9-99.9-49-129 0L10.6 384c-29.7 50 6.3 113.3 64.5 113.3h361.7C495 497.2 531.1 434 501.4 384zM256 437.2c-16.5 0-30-13.5-30-30 0-16.5 13.5-30 30-30 16.5 0 30 13.5 30 30C286 423.8 272.5 437.2 256 437.2zM286 317.2c0 16.5-13.5 30-30 30 -16.5 0-30-13.5-30-30v-150c0-16.5 13.5-30 30-30 16.5 0 30 13.5 30 30V317.2z");
 
-        div_buttons.append(alert);
-        div_buttons.append(heart);
+        alert.appendChild(alert_path);
+        link_alert.append(alert);
+
+        let link_heart = document.createElement('a');
+        link_heart.setAttribute('href', '/denouncememe/' + memes[meme]['id']);
+
+        var svgNS = "http://www.w3.org/2000/svg";  
+        var heart = document.createElementNS(svgNS,"svg"); 
+        heart.setAttributeNS(null,"id","heart");
+        heart.setAttributeNS(null,"viewBox", "0 0 512 512");
+        var heart_path = document.createElementNS(svgNS, "path");
+        heart_path.setAttributeNS(null,"d","M376 30c-27.8 0-53.3 8.8-75.7 26.2 -21.5 16.6-35.9 37.9-44.3 53.3 -8.4-15.4-22.8-36.6-44.3-53.3C189.3 38.8 163.8 30 136 30 58.5 30 0 93.4 0 177.5c0 90.9 72.9 153 183.4 247.1 18.8 16 40 34.1 62.1 53.4C248.4 480.6 252.1 482 256 482s7.6-1.4 10.5-4c22.1-19.3 43.3-37.4 62.1-53.4C439.1 330.5 512 268.4 512 177.5 512 93.4 453.5 30 376 30z");
+
+        heart.appendChild(heart_path);
+        link_heart.append(heart);
+
+        // let link_heart = document.createElement('a');
+        // link_heart.setAttribute('href', '/denouncememe/' + memes[meme]['id']);
+        // let heart = document.createElement('svg');
+        // heart.setAttribute('id', 'heart');
+        // heart.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
+        // heart.setAttribute('viewBox', '0 0 512 512');
+        // let heart_path = document.createElement('path');
+        // heart_path.setAttribute('d', 'M376 30c-27.8 0-53.3 8.8-75.7 26.2 -21.5 16.6-35.9 37.9-44.3 53.3 -8.4-15.4-22.8-36.6-44.3-53.3C189.3 38.8 163.8 30 136 30 58.5 30 0 93.4 0 177.5c0 90.9 72.9 153 183.4 247.1 18.8 16 40 34.1 62.1 53.4C248.4 480.6 252.1 482 256 482s7.6-1.4 10.5-4c22.1-19.3 43.3-37.4 62.1-53.4C439.1 330.5 512 268.4 512 177.5 512 93.4 453.5 30 376 30z');
+        // heart.append(heart_path);
+        // link_heart.append(heart);
+
+        div_buttons.append(link_alert);
+        div_buttons.append(link_heart);
 
         div_info.append(div_buttons);
 
