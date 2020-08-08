@@ -1,3 +1,5 @@
+var auth_user = document.getElementById('user_id');
+
 function getMemes(){
 
     let headers = new Headers();
@@ -61,31 +63,48 @@ function showMemes(memes){
 
         let div_buttons = document.createElement('div');
         div_buttons.setAttribute('class', 'buttons');
-        div_buttons.style.display = "flex";
 
-        let link_alert = document.createElement('a');
-        link_alert.setAttribute('href', '/denouncememe/' + memes[meme]['id']);
+        var svgNS = "http://www.w3.org/2000/svg";
 
-        var svgNS = "http://www.w3.org/2000/svg";  
-        var alert = document.createElementNS(svgNS,"svg"); 
-        alert.setAttributeNS(null,"id","alert");
-        alert.setAttributeNS(null,"viewBox", "0 0 512 512");
-        var alert_path = document.createElementNS(svgNS, "path");
-        alert_path.setAttributeNS(null,"d","M501.4 384L320.5 51.5c-29.1-48.9-99.9-49-129 0L10.6 384c-29.7 50 6.3 113.3 64.5 113.3h361.7C495 497.2 531.1 434 501.4 384zM256 437.2c-16.5 0-30-13.5-30-30 0-16.5 13.5-30 30-30 16.5 0 30 13.5 30 30C286 423.8 272.5 437.2 256 437.2zM286 317.2c0 16.5-13.5 30-30 30 -16.5 0-30-13.5-30-30v-150c0-16.5 13.5-30 30-30 16.5 0 30 13.5 30 30V317.2z");
+        if(auth_user != null && memes[meme]['user_id'] == auth_user.innerText){
+            console.log('entrou aqui');
+            var remove = document.createElementNS(svgNS, "svg");
+            remove.setAttributeNS(null, "id", "delete" + memes[meme]['id']);
+            remove.setAttributeNS(null, "viewBox", "0 0 512 512");
+            var remove_path1 = document.createElementNS(svgNS, "path");
+            remove_path1.setAttributeNS(null, "d", "m424 64h-88v-16c0-26.51-21.49-48-48-48h-64c-26.51 0-48 21.49-48 48v16h-88c-22.091 0-40 17.909-40 40v32c0 8.837 7.163 16 16 16h384c8.837 0 16-7.163 16-16v-32c0-22.091-17.909-40-40-40zm-216-16c0-8.82 7.18-16 16-16h64c8.82 0 16 7.18 16 16v16h-96z");
+            var remove_path2 = document.createElementNS(svgNS, "path");
+            remove_path2.setAttributeNS(null, "d", "m78.364 184c-2.855 0-5.13 2.386-4.994 5.238l13.2 277.042c1.22 25.64 22.28 45.72 47.94 45.72h242.98c25.66 0 46.72-20.08 47.94-45.72l13.2-277.042c.136-2.852-2.139-5.238-4.994-5.238zm241.636 40c0-8.84 7.16-16 16-16s16 7.16 16 16v208c0 8.84-7.16 16-16 16s-16-7.16-16-16zm-80 0c0-8.84 7.16-16 16-16s16 7.16 16 16v208c0 8.84-7.16 16-16 16s-16-7.16-16-16zm-80 0c0-8.84 7.16-16 16-16s16 7.16 16 16v208c0 8.84-7.16 16-16 16s-16-7.16-16-16z");
+            remove.appendChild(remove_path1);
+            remove.appendChild(remove_path2);
 
-        alert.appendChild(alert_path);
-        link_alert.append(alert);
+            div_buttons.appendChild(remove);
+        } else {
+            let link_alert = document.createElement('a');
+            link_alert.setAttribute('href', '/denouncememe/' + memes[meme]['id']);
 
-        var heart = document.createElementNS(svgNS,"svg"); 
-        heart.setAttributeNS(null,"id","heart" + memes[meme]['id']);
-        heart.setAttributeNS(null,"viewBox", "0 0 512 512");
-        var heart_path = document.createElementNS(svgNS, "path");
-        heart_path.setAttributeNS(null,"d","M376 30c-27.8 0-53.3 8.8-75.7 26.2 -21.5 16.6-35.9 37.9-44.3 53.3 -8.4-15.4-22.8-36.6-44.3-53.3C189.3 38.8 163.8 30 136 30 58.5 30 0 93.4 0 177.5c0 90.9 72.9 153 183.4 247.1 18.8 16 40 34.1 62.1 53.4C248.4 480.6 252.1 482 256 482s7.6-1.4 10.5-4c22.1-19.3 43.3-37.4 62.1-53.4C439.1 330.5 512 268.4 512 177.5 512 93.4 453.5 30 376 30z");
+            
+            var alert = document.createElementNS(svgNS,"svg"); 
+            alert.setAttributeNS(null,"id","alert");
+            alert.setAttributeNS(null,"viewBox", "0 0 512 512");
+            var alert_path = document.createElementNS(svgNS, "path");
+            alert_path.setAttributeNS(null,"d","M501.4 384L320.5 51.5c-29.1-48.9-99.9-49-129 0L10.6 384c-29.7 50 6.3 113.3 64.5 113.3h361.7C495 497.2 531.1 434 501.4 384zM256 437.2c-16.5 0-30-13.5-30-30 0-16.5 13.5-30 30-30 16.5 0 30 13.5 30 30C286 423.8 272.5 437.2 256 437.2zM286 317.2c0 16.5-13.5 30-30 30 -16.5 0-30-13.5-30-30v-150c0-16.5 13.5-30 30-30 16.5 0 30 13.5 30 30V317.2z");
 
-        heart.appendChild(heart_path);
+            alert.appendChild(alert_path);
+            link_alert.append(alert);
 
-        div_buttons.append(link_alert);
-        div_buttons.append(heart);
+            var heart = document.createElementNS(svgNS,"svg"); 
+            heart.setAttributeNS(null,"id","heart" + memes[meme]['id']);
+            heart.setAttributeNS(null,"viewBox", "0 0 512 512");
+            var heart_path = document.createElementNS(svgNS, "path");
+            heart_path.setAttributeNS(null,"d","M376 30c-27.8 0-53.3 8.8-75.7 26.2 -21.5 16.6-35.9 37.9-44.3 53.3 -8.4-15.4-22.8-36.6-44.3-53.3C189.3 38.8 163.8 30 136 30 58.5 30 0 93.4 0 177.5c0 90.9 72.9 153 183.4 247.1 18.8 16 40 34.1 62.1 53.4C248.4 480.6 252.1 482 256 482s7.6-1.4 10.5-4c22.1-19.3 43.3-37.4 62.1-53.4C439.1 330.5 512 268.4 512 177.5 512 93.4 453.5 30 376 30z");
+
+            heart.appendChild(heart_path);
+
+            div_buttons.append(link_alert);
+            div_buttons.append(heart);
+        }
+        
 
         div_info.append(div_buttons);
 
@@ -94,10 +113,11 @@ function showMemes(memes){
         article.append(div_date);
         article.append(div_info);
 
-        main.append(article);
+        main.append(article); 
     }
-
-    getFavoriteButtons(memes);
+    if(auth_user == null){
+       getFavoriteButtons(memes); 
+    }
 }
 
 function getFavoriteButtons(memes) {
