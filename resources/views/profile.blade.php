@@ -43,9 +43,6 @@
             </select>
         </div> 
 
-        {{-- <div class="erro-profile">
-            <h4>Ooops! Você ainda não possui nenhum meme cadastrado ):</h4>
-        </div> --}}
     </main>
 @endsection
 @section('javascript')

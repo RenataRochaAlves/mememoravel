@@ -23,6 +23,7 @@ Route::get('/profile', function(){
 });
 
 Route::get('/profilecontent/{id}', 'MemeController@showMemesFromUser');
+Route::get('/favoritecontent/{id}', 'MemeController@showFavoriteMemes');
 
 Route::get('/favorites', function(){
     return view('favorites');
