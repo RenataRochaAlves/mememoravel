@@ -1,5 +1,6 @@
 var auth_user = document.getElementById('user_id');
 var main = document.querySelector('main');
+var status = '';
 
 function getMemes(){
 
@@ -82,7 +83,6 @@ function showMemes(memes){
             let link_alert = document.createElement('a');
             link_alert.setAttribute('href', '/denouncememe/' + memes[meme]['id']);
 
-            
             var alert = document.createElementNS(svgNS,"svg"); 
             alert.setAttributeNS(null,"id","alert");
             alert.setAttributeNS(null,"viewBox", "0 0 512 512");
@@ -100,6 +100,15 @@ function showMemes(memes){
 
             heart.appendChild(heart_path);
 
+            checkFavorite(memes[meme]['id'], auth_user.innerText);
+
+            // if(status == 'ok'){
+            //     heart.style.fill = '#ed6263';
+            //     console.log('pq nao deu certo?');
+            // } else {
+            //     heart.style.fill = '#b4c2c8';
+            // }
+
             div_buttons.append(link_alert);
             div_buttons.append(heart);
         }
@@ -112,13 +121,15 @@ function showMemes(memes){
         article.append(div_info);
 
         main.append(article);
-
+        
         getActionButton(memes[meme]['id'], memes[meme]['user_id']);
     }
 }
 
 function getActionButton(meme_id, user_id) {
     var actionButton = document.getElementById('action' + meme_id);
+    
+
     actionButton.onclick = function(evt){
         if(user_id == auth_user.innerText){
             deleteMeme(meme_id);
@@ -140,6 +151,28 @@ function addToFavorites(id) {
         method: 'GET',
         headers: headers
     })
+}
+
+function checkFavorite(meme_id, user_id) {
+    var headers = new Headers();
+
+    fetch('/favorite/' + meme_id + '/' + user_id,{
+        method:'get',
+        headers: headers
+    }).then(
+        function(response){
+            return response.json();
+        }
+    ).then(
+        function(result){
+            if(result){
+                document.getElementById('action' + meme_id).style.fill = '#ed6263';
+                console.log(result); 
+            }
+            
+            return result;
+        }
+    )
 }
 
 function deleteMeme(id) {

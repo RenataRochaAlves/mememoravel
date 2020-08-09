@@ -7,6 +7,7 @@ use App\Denounce;
 use App\Favorites;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class MemeController extends Controller
 {
@@ -74,6 +75,24 @@ class MemeController extends Controller
         $favorite->save();
 
         return('ok');
+    }
+
+    public function checkFavorite(Request $request, $meme_id, $user_id)
+    {
+        $response = DB::table('favorites')
+                    ->select('id')
+                    ->where([
+                        ['meme_id', '=', $meme_id],
+                        ['user_id', '=', $user_id]
+                        ])
+                    ->get();
+        
+        if($response != '[]'){
+           return response()->json(true); 
+        } else {
+            return response()->json(false);  
+        }
+        
     }
 
     public function deleteMemeById(Request $request, $id){
