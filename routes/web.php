@@ -45,6 +45,8 @@ Route::get('/erro', function(){
     return view('erro');
 });
 
+Route::delete('/deletememe/{id}', 'MemeController@deleteMemeById');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

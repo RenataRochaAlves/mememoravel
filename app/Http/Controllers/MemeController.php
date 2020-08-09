@@ -33,13 +33,13 @@ class MemeController extends Controller
 
         $meme = new Meme;
         $meme->name = $request->name;
-        $meme->link = $key;
+        $meme->link = "https://www.youtube.com/embed/$key";
         $meme->year = $request->year;
         $meme->upload_date = now();
-        $meme->user_id = Auth::user()->id;
+        $meme->user_id = $request->user_id;
         $meme->save();
 
-        return redirect('/profile');
+        return redirect('/');
     }
 
     public function newDenounce(Request $request, $id)
@@ -72,6 +72,13 @@ class MemeController extends Controller
         $favorite->user_id = Auth::user()->id;
         $favorite->meme_id = $id;
         $favorite->save();
+
+        return('ok');
+    }
+
+    public function deleteMemeById(Request $request, $id){
+        $meme = Meme::find($id);
+        $meme->delete();
 
         return('ok');
     }

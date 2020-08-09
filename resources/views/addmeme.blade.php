@@ -11,7 +11,7 @@
 
         <iframe width="560" height="315" src="https://www.youtube.com/embed/O16uoBap-Vo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-        <form method="POST" action="api/meme">
+        <form method="POST" action="/addmeme">
             @csrf
 
             <div class="form-group row">

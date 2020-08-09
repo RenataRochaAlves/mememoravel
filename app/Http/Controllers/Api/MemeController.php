@@ -60,11 +60,4 @@ class MemeController extends Controller
 
         return response()->json('Meme editado com sucesso!');
     }
-
-    public function deleteMemeById(Request $request, $id){
-        $meme = Meme::find($id);
-        $meme->delete();
-
-        return response()->json('Meme deletado com sucesso!');
-    }
 }

@@ -16,10 +16,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/memes', 'Api\MemeController@showAllMemes');
 
-Route::post('/meme', 'Api\MemeController@createMeme');
+// Route::post('/meme', 'Api\MemeController@createMeme');
 
 Route::get('/meme/{id}', 'Api\MemeController@showMemeById');
 
-Route::put('/meme/{id}', 'Api\MemeController@editMemeById');
+// Route::put('/meme/{id}', 'Api\MemeController@editMemeById');
 
-Route::delete('/meme/{id}', 'Api\MemeController@deleteMemeById');
+// Route::delete('/meme/{id}', 'Api\MemeController@deleteMemeById');
