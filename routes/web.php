@@ -22,6 +22,8 @@ Route::get('/profile', function(){
     return view('profile');
 });
 
+Route::get('/profilecontent/{id}', 'MemeController@showMemesFromUser');
+
 Route::get('/favorites', function(){
     return view('favorites');
 });

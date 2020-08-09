@@ -1,6 +1,5 @@
 var auth_user = document.getElementById('user_id');
 var main = document.querySelector('main');
-var status = '';
 
 function getMemes(){
 
@@ -100,17 +99,12 @@ function showMemes(memes){
 
             heart.appendChild(heart_path);
 
-            checkFavorite(memes[meme]['id'], auth_user.innerText);
-
-            // if(status == 'ok'){
-            //     heart.style.fill = '#ed6263';
-            //     console.log('pq nao deu certo?');
-            // } else {
-            //     heart.style.fill = '#b4c2c8';
-            // }
-
             div_buttons.append(link_alert);
             div_buttons.append(heart);
+
+            if(auth_user != null){
+                checkFavorite(memes[meme]['id'], auth_user.innerText);
+            }
         }
 
         div_info.append(div_buttons);
@@ -128,7 +122,6 @@ function showMemes(memes){
 
 function getActionButton(meme_id, user_id) {
     var actionButton = document.getElementById('action' + meme_id);
-    
 
     actionButton.onclick = function(evt){
         if(user_id == auth_user.innerText){
