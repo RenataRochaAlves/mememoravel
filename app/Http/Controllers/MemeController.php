@@ -98,8 +98,6 @@ class MemeController extends Controller
     public function deleteMemeById(Request $request, $id){
         $meme = Meme::find($id);
         $meme->delete();
-
-        return('ok');
     }
 
     public function showMemesFromUser(Request $request, $id){
@@ -123,5 +121,12 @@ class MemeController extends Controller
                 ->get();
 
         return response()->json($memes);
+    }
+
+    public function removeFromFavorites(Request $request, $meme_id, $user_id)
+    {
+        $query = DB::table('favorites')
+                    ->where(['meme_id', '=', $meme_id], ['user_id', '=', $user_id])
+                    ->delete();
     }
 }

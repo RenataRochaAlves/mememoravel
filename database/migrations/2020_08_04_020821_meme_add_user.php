@@ -14,7 +14,7 @@ class MemeAddUser extends Migration
     public function up()
     {
         Schema::table('memes', function (Blueprint $table){
-            $table->foreignId('user_id')->onDelete('cascade')->constrained('users');
+            $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
         });
     }
 

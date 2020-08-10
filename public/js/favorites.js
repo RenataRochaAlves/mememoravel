@@ -14,7 +14,6 @@ function getMemes(){
         }
     ).then(
         function(memes){
-            console.log(memes);
             showMemes(memes);
         }
     )
@@ -121,16 +120,17 @@ function getActionButton(meme_id) {
     var actionButton = document.getElementById('action' + meme_id);
 
     actionButton.onclick = function(evt){
-        deleteMeme(meme_id);
         document.getElementById(meme_id).style.display = "none";
+        removeFromFavorites(meme_id, auth_user.innerText);
     }
 }
 
-function deleteMeme(id) {
+function removeFromFavorites(meme_id, user_id) {
     var headers = new Headers();
     headers.append('X-CSRF-TOKEN', document.querySelector('meta[name="csrf-token"]').content);
+    console.log(headers);
 
-    fetch('/deletememe/' + id, {
+    fetch('/favorite/' + meme_id + '/' + user_id, {
         method: 'DELETE',
         headers: headers
     });

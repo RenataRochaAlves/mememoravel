@@ -41,6 +41,7 @@ Route::post('/addmeme', 'MemeController@create');
 
 Route::get('/favorite/{id}', 'MemeController@addToFavorites');
 Route::get('/favorite/{meme_id}/{user_id}', 'MemeController@checkFavorite');
+Route::delete('/favorite/{meme_id}/{user_id}', 'MemeController@removeFromFavorites');
 
 Route::get('/denouncememe/{id}', 'MemeController@newDenounce');
 Route::post('/denouncememe/{id}', 'MemeController@createDenounce');

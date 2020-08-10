@@ -124,7 +124,7 @@ function getActionButton(meme_id, user_id) {
     var actionButton = document.getElementById('action' + meme_id);
 
     actionButton.onclick = function(evt){
-        if(user_id == auth_user.innerText){
+        if(auth_user != null && user_id == auth_user.innerText){
             deleteMeme(meme_id);
             var card = document.getElementById(meme_id).style.display = "none";
             console.log('clicou no delete');
