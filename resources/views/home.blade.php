@@ -26,7 +26,8 @@
                 <option value="mostLiked">Mais curtidos</option>
                 <option value="lessLiked">Menos curtidos</option>
             </select>
-        </div> 
+        </div>
+        <div class="content"></div>
     </main>
 @endsection
 @section('javascript')

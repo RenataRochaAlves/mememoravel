@@ -42,7 +42,7 @@
                 <option value="lessLiked">Menos curtidos</option>
             </select>
         </div> 
-
+        <div class="content"></div>
     </main>
 @endsection
 @section('javascript')

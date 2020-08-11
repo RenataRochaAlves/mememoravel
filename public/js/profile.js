@@ -1,5 +1,5 @@
 var auth_user = document.getElementById('user_id');
-var main = document.querySelector('main');
+var main = document.querySelector('.content');
 
 function getMemes(){
 

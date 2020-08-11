@@ -1,5 +1,5 @@
 var auth_user = document.getElementById('user_id');
-var main = document.querySelector('main');
+var main = document.querySelector('.content');
 
 function getMemes(){
 
@@ -199,20 +199,13 @@ var order_select = document.getElementById('order');
 
 
 order_select.onchange = function(evt){
+    main.innerText = '';
     var order = order_select.options[order_select.selectedIndex].value;
     if(order == 'oldest'){
-        var cards = document.querySelectorAll('article');
-        for (var i = 0; i < cards.length; i++) {
-            cards[i].style.display = "none";
-        }
         getMemesbyAsc();
-    } 
+    } else if(order == 'newest'){
+        getMemes();
+    }
 }
-
-// order.onclick = function(evt){
-//     console.log('entrou');
-//     document.querySelectorAll('article').style.display = "none";
-//     getMemesbyAsc();
-// }
 
 getMemes();

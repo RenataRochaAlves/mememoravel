@@ -157,6 +157,15 @@ main {
     margin-bottom: 150px;
 }
 
+.content {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
 article {
     width: calc(100% / 3 - 40px);
     min-width: 250px;
