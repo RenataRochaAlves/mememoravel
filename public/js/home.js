@@ -37,6 +37,24 @@ function getMemesbyAsc(){
     )
 }
 
+function getMemesbyYear(year){
+
+    let headers = new Headers();
+
+    fetch('/memes/' + year,{
+        method:'get',
+        headers: headers
+    }).then(
+        function(response){
+            return response.json();
+        }
+    ).then(
+        function(memes){
+            showMemes(memes);
+        }
+    )
+}
+
 function showMemes(memes){
 
     for (let meme of Object.keys(memes)){
@@ -223,7 +241,13 @@ function getYears(){
     );
 }
 
-var year = document.getElementById('year');
+var year_select = document.getElementById('year');
+year_select.onchange = function(evt){
+    main.innerText = '';
+    var year = year_select.options[year_select.selectedIndex].value;
+    getMemesbyYear(year);
+}
+
 function showYears(years){
     for (let i = 0; i < years.length; i++) {
         console.log(years[i]['year']);
@@ -231,7 +255,7 @@ function showYears(years){
         year_option.setAttribute('value', years[i]['year']);
         year_option.innerText = years[i]['year'];
 
-        year.appendChild(year_option);
+        year_select.appendChild(year_option);
     }
 }
 
