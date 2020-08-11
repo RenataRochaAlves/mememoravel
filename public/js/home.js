@@ -68,7 +68,18 @@ function getMemesbySearch(search){
         }
     ).then(
         function(memes){
-            showMemes(memes);
+            if(memes.length == 0){
+                var div_erro = document.createElement('div');
+                div_erro.setAttribute('class', 'erro-profile');
+
+                var erro = document.createElement('h4');
+                erro.innerText = "Ooops! Não encontramos nenhum meme com base na sua pesquisa ):";
+
+                div_erro.append(erro);
+                main.appendChild(div_erro);
+            } else {
+                showMemes(memes);
+            }
         }
     )
 }
