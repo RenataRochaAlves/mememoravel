@@ -11,6 +11,16 @@ use Illuminate\Support\Facades\DB;
 
 class MemeController extends Controller
 {
+    public function getMemesByAsc(){
+        $memes = DB::table('memes')
+                ->join('users', 'users.id', '=', 'memes.user_id')
+                ->select('memes.id', 'memes.name', 'memes.link', 'memes.year', 'memes.upload_date', 'users.id as user_id', 'users.name as user_name', 'users.avatar', 'users.username')    
+                ->orderBy('memes.id', 'asc')
+                ->get();
+
+        return response()->json($memes);
+    }
+
     protected function validator(array $data)
     {
         return Validator::make($data, [
@@ -19,8 +29,6 @@ class MemeController extends Controller
             'year' => ['number', 'max:4'],
         ]);
     }
-
-    
 
     public function create(Request $request)
     {

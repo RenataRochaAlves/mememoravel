@@ -11,7 +11,6 @@ use App\Meme;
 class MemeController extends Controller
 {
     public function showAllMemes(){
-        // $memes = Meme::all()->sortByDesc('id');
         $memes = DB::table('memes')
                 ->join('users', 'users.id', '=', 'memes.user_id')
                 ->select('memes.id', 'memes.name', 'memes.link', 'memes.year', 'memes.upload_date', 'users.id as user_id', 'users.name as user_name', 'users.avatar', 'users.username')    

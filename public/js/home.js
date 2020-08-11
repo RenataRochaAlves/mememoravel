@@ -19,6 +19,24 @@ function getMemes(){
     )
 }
 
+function getMemesbyAsc(){
+
+    let headers = new Headers();
+
+    fetch('/memes/asc',{
+        method:'get',
+        headers: headers
+    }).then(
+        function(response){
+            return response.json();
+        }
+    ).then(
+        function(memes){
+            showMemes(memes);
+        }
+    )
+}
+
 function showMemes(memes){
 
     for (let meme of Object.keys(memes)){
@@ -160,7 +178,6 @@ function checkFavorite(meme_id, user_id) {
         function(result){
             if(result){
                 document.getElementById('action' + meme_id).style.fill = '#ed6263';
-                console.log(result); 
             }
             
             return result;
@@ -177,5 +194,25 @@ function deleteMeme(id) {
         headers: headers
     });
 }
+
+var order_select = document.getElementById('order');
+
+
+order_select.onchange = function(evt){
+    var order = order_select.options[order_select.selectedIndex].value;
+    if(order == 'oldest'){
+        var cards = document.querySelectorAll('article');
+        for (var i = 0; i < cards.length; i++) {
+            cards[i].style.display = "none";
+        }
+        getMemesbyAsc();
+    } 
+}
+
+// order.onclick = function(evt){
+//     console.log('entrou');
+//     document.querySelectorAll('article').style.display = "none";
+//     getMemesbyAsc();
+// }
 
 getMemes();
