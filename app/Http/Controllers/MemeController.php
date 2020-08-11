@@ -90,11 +90,22 @@ class MemeController extends Controller
         return response()->json($query);
     }
 
-    public function getMemesByYear($year){
+    public function getMemesByYear(Request $request, $year){
         $memes = DB::table('memes')
                 ->join('users', 'users.id', '=', 'memes.user_id')
                 ->select('memes.id', 'memes.name', 'memes.link', 'memes.year', 'memes.upload_date', 'users.id as user_id', 'users.name as user_name', 'users.avatar', 'users.username')
                 ->where('memes.year', '=', $year)  
+                ->orderBy('memes.id', 'desc')
+                ->get();
+
+        return response()->json($memes);
+    }
+
+    public function getMemesBySearch(Request $request, $search){
+        $memes = DB::table('memes')
+                ->join('users', 'users.id', '=', 'memes.user_id')
+                ->select('memes.id', 'memes.name', 'memes.link', 'memes.year', 'memes.upload_date', 'users.id as user_id', 'users.name as user_name', 'users.avatar', 'users.username')
+                ->where('memes.name', 'like', '%' . $search . '%')  
                 ->orderBy('memes.id', 'desc')
                 ->get();
 

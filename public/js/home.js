@@ -55,6 +55,24 @@ function getMemesbyYear(year){
     )
 }
 
+function getMemesbySearch(search){
+
+    let headers = new Headers();
+
+    fetch('/search/' + search,{
+        method:'get',
+        headers: headers
+    }).then(
+        function(response){
+            return response.json();
+        }
+    ).then(
+        function(memes){
+            showMemes(memes);
+        }
+    )
+}
+
 function showMemes(memes){
 
     for (let meme of Object.keys(memes)){
@@ -251,13 +269,18 @@ year_select.onchange = function(evt){
 
 function showYears(years){
     for (let i = 0; i < years.length; i++) {
-        console.log(years[i]['year']);
         let year_option = document.createElement('option');
         year_option.setAttribute('value', years[i]['year']);
         year_option.innerText = years[i]['year'];
 
         year_select.appendChild(year_option);
     }
+}
+
+var search_input = document.getElementById('search');
+search_input.onkeypress = function(evt){
+    main.innerText = '';
+    getMemesbySearch(search_input.value);
 }
 
 getYears();
