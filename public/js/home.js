@@ -76,7 +76,8 @@ function showMemes(memes){
         let div_date = document.createElement('div');
         div_date.setAttribute('class', 'date');
         let upload_date = document.createElement('h6');
-        upload_date.innerText = memes[meme]['upload_date'];
+        let original_date = memes[meme]['upload_date'].split('-');
+        upload_date.innerText = original_date[2] + '/' + original_date[1] + '/' + original_date[0];
         let year = document.createElement('h5');
         year.innerText = memes[meme]['year'];
         div_date.append(upload_date);
