@@ -16,7 +16,6 @@ class Denouces extends Migration
         Schema::create('denounces', function (Blueprint $table) {
             $table->id();
             $table->foreignId('id_post')->constrained('memes')->onDelete('cascade');
-            $table->foreignId('id_denunciator')->constrained('users')->onDelete('cascade');
             $table->string('spam')->nullable();
             $table->string('nudity')->nullable();
             $table->string('violence')->nullable();

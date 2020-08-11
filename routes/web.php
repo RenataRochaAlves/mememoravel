@@ -52,6 +52,7 @@ Route::get('/erro', function(){
 
 Route::delete('/deletememe/{id}', 'MemeController@deleteMemeById');
 Route::get('/memes/asc', 'MemeController@getMemesByAsc');
+Route::get('/getyears', 'MemeController@getYears');
 
 Auth::routes();
 

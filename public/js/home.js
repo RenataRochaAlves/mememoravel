@@ -196,8 +196,6 @@ function deleteMeme(id) {
 }
 
 var order_select = document.getElementById('order');
-
-
 order_select.onchange = function(evt){
     main.innerText = '';
     var order = order_select.options[order_select.selectedIndex].value;
@@ -207,5 +205,36 @@ order_select.onchange = function(evt){
         getMemes();
     }
 }
+
+function getYears(){
+    let headers = new Headers();
+
+    fetch('/getyears',{
+        method:'get',
+        headers: headers
+    }).then(
+        function(response){
+            return response.json();
+        }
+    ).then(
+        function(years){
+            showYears(years);
+        }
+    );
+}
+
+var year = document.getElementById('year');
+function showYears(years){
+    for (let i = 0; i < years.length; i++) {
+        console.log(years[i]['year']);
+        let year_option = document.createElement('option');
+        year_option.setAttribute('value', years[i]['year']);
+        year_option.innerText = years[i]['year'];
+
+        year.appendChild(year_option);
+    }
+}
+
+getYears();
 
 getMemes();

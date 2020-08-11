@@ -62,7 +62,6 @@ class MemeController extends Controller
     {
         $denounce = new Denounce();
         $denounce->id_post = $id;
-        $denounce->id_denunciator = Auth::user()->id;
         $denounce->spam = $request->spam;
         $denounce->nudity = $request->nudity;
         $denounce->violence = $request->violence;
@@ -78,6 +77,17 @@ class MemeController extends Controller
     public function deleteMemeById(Request $request, $id){
         $meme = Meme::find($id);
         $meme->delete();
+    }
+
+    public function getYears()
+    {
+        $query = DB::table('memes')
+                ->select('year')
+                ->groupBy('year')
+                ->orderBy('year', 'desc')
+                ->get();
+
+        return response()->json($query);
     }
 
 }
