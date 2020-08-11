@@ -290,8 +290,10 @@ function showYears(years){
 
 var search_input = document.getElementById('search');
 search_input.onkeypress = function(evt){
-    main.innerText = '';
-    getMemesbySearch(search_input.value);
+    if(search_input.value != ''){
+        main.innerText = '';
+        getMemesbySearch(search_input.value);  
+    }
 }
 
 getYears();

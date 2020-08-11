@@ -1,6 +1,6 @@
 @extends('template')
 
-@section('title', 'Denunciar Meme | Baú de Memes')
+@section('title', 'Denunciar Meme')
 
 @section('content')
 

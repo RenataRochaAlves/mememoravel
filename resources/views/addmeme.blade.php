@@ -1,6 +1,6 @@
 @extends('template')
 
-@section('title', 'Cadastrar Meme | Baú de Memes')
+@section('title', 'Cadastrar Meme')
 
 @section('content')
 <main id="register" class="editprofile add meme">

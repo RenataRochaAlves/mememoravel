@@ -1,6 +1,6 @@
 @extends('template')
 
-@section('title', 'Home | Baú de Memes')
+@section('title', 'Home')
 
 @section('content')
     <main>

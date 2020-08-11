@@ -484,6 +484,30 @@ footer svg:hover {
     text-align: center;
 }
 
+.title-favorite {
+    width: 100%;
+    margin-top: 10px;
+    padding: 20px;
+    border-top: 2px solid #f7c65c;
+}
+
+.title-favorite h3 {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.title-profile {
+    width: 100%;
+    margin-top: 10px;
+    padding: 20px;
+    border-top: 2px solid #6fd19d;
+}
+
+.title-profile h3 {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
 /* EDIT PROFILE */
 .editprofile {
     padding-bottom: 50px;

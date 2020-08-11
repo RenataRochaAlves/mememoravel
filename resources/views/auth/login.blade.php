@@ -1,6 +1,6 @@
 @extends('template')
 
-@section('title', 'Login | Baú de Memes')
+@section('title', 'Login')
 
 @section('content')
 <main id="register" class="editprofile add meme">
@@ -36,7 +36,7 @@
                 </div>
             </div>
 
-            <div class="form-group row">
+            {{-- <div class="form-group row">
                 <div class="form-check">
                     <div>
                         <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
@@ -51,7 +51,7 @@
                         </a>
                     @endif
                 </div>
-            </div>
+            </div> --}}
 
             <div class="form-group row mb-0">
                 <div class="col-md-8 offset-md-4">
