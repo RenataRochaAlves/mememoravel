@@ -22,8 +22,8 @@ Route::get('/profile', function(){
     return view('profile');
 });
 
-Route::get('/profilecontent/{id}', 'MemeController@showMemesFromUser');
-Route::get('/favoritecontent/{id}', 'MemeController@showFavoriteMemes');
+Route::get('/profilecontent/{id}', 'FavoritesController@showMemesFromUser');
+Route::get('/favoritecontent/{id}', 'FavoritesController@showFavoriteMemes');
 
 Route::get('/favorites', function(){
     return view('favorites');
@@ -39,9 +39,9 @@ Route::get('/addmeme', function(){
 });
 Route::post('/addmeme', 'MemeController@create');
 
-Route::get('/favorite/{id}', 'MemeController@addToFavorites');
-Route::get('/favorite/{meme_id}/{user_id}', 'MemeController@checkFavorite');
-Route::delete('/favorite/{meme_id}/{user_id}', 'MemeController@removeFromFavorites');
+Route::get('/favorite/{id}', 'FavoritesController@addToFavorites');
+Route::get('/favorite/{meme_id}/{user_id}', 'FavoritesController@checkFavorite');
+Route::delete('/favorite/{meme_id}/{user_id}', 'FavoritesController@removeFromFavorites');
 
 Route::get('/denouncememe/{id}', 'MemeController@newDenounce');
 Route::post('/denouncememe/{id}', 'MemeController@createDenounce');

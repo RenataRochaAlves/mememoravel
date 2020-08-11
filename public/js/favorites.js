@@ -133,6 +133,8 @@ function removeFromFavorites(meme_id, user_id) {
     fetch('/favorite/' + meme_id + '/' + user_id, {
         method: 'DELETE',
         headers: headers
+    }).then((data) => {
+        console.log(data);
     });
 }
 
