@@ -56,6 +56,10 @@ Route::get('/memes/{year}', 'MemeController@getMemesByYear');
 Route::get('/search/{search}', 'MemeController@getMemesBySearch');
 Route::get('/getyears', 'MemeController@getYears');
 
+Route::get('/info', function(){
+    return view('info');
+});
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
