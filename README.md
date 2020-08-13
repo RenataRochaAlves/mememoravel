@@ -1,79 +1,62 @@
-<p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
+<p align="center"><img src="img/logo.png" width="200"></p>
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+<h1 align="center">Mememorável</h1>
 
-## About Laravel
+> Aplicação disponível no Heroku: [Mememorável](https://mememoravel.herokuapp.com/)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Sobre o Mememorável
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Apesar de os memes fazerem parte do nosso entretenimento desde a popularização da internet, ainda há uma falta de registro e centralização desse conteúdo. O que dificulta a busca por memes antigos e o acesso a dados como quais memes surgiram em determinado ano. Pensando nisso, desenvolvi o Mememorável como uma forma de arquivar memes e evitar que eles se percam com o tempo, além de levar diversão e nostalgia aos usuários que, ao navegarem pelo site, podem encontrar memes que marcaram alguma fase de sua vida mas que já nem se lembravam mais. Os usuários também podem contribuir com a comunidade ao cadastrarem novos memes e popularem o banco de dados colaborativo, que pode ser utilizado por outros desenvolvedores através do consumo da API. 
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Ferramentas utilizadas
 
-## Learning Laravel
+O back-end da aplicação foi desenvolvido com o uso do framework PHP Laravel 7 através da arquitetura MVC e o banco de dados relacional foi construído em MySQL, já para o front-end, foram construídos layouts responsivos utilizando HTML5, CSS3 e JavaScript.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## Consumo da API
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Foi desenvolvida uma API que é consumida internamente na própria plataforma e está disponível para outros desenvolvedores que desejarem utilizar os dados dos memes registrados. Basta enviar uma requisição para a URL abaixo para ter acesso ao arquivo JSON:
 
-## Laravel Sponsors
+> https://mememoravel.herokuapp.com/api/memes
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+## Funcionamento da Plataforma
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- [UserInsights](https://userinsights.com)
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-- [CodeBrisk](https://codebrisk.com)
-- [1Forge](https://1forge.com)
-- [TECPRESSO](https://tecpresso.co.jp/)
-- [Runtime Converter](http://runtimeconverter.com/)
-- [WebL'Agence](https://weblagence.com/)
-- [Invoice Ninja](https://www.invoiceninja.com)
-- [iMi digital](https://www.imi-digital.de/)
-- [Earthlink](https://www.earthlink.ro/)
-- [Steadfast Collective](https://steadfastcollective.com/)
-- [We Are The Robots Inc.](https://watr.mx/)
-- [Understand.io](https://www.understand.io/)
-- [Abdel Elrafa](https://abdelelrafa.com)
-- [Hyper Host](https://hyper.host)
-- [Appoly](https://www.appoly.co.uk)
-- [OP.GG](https://op.gg)
-- [云软科技](http://www.yunruan.ltd/)
+### Home
 
-## Contributing
+Na Home é possível encontrar todos os memes cadastrados por ordem decrescente, exibindo os memes cadastrados mais recentemente primeiro. É possível exibi-los de maneira crescente ao selecionar "Mais antigos" no canto superior direito. Também é possível filtrá-los por ano de surgimento, exibindo apenas os memes datados de determinado ano. Além disso, é possível realizar uma busca dinâmica para encontrar um meme específico na plataforma caso ele exista, caso contrário, será exibida uma mensagem ao usuário.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### Cards de memes
 
-## Code of Conduct
+Nos cards de memes é possível encontrar o vídeo do meme, o nome, a data em que o vídeo foi cadastrado na plataforma e, em amarelo, o ano em que ele surgiu. Logo abaixo, estão as informações do usuário que o cadastrou, como o avatar e o username. Ao lado das informações estão dois botões de interação com aquele meme, no ícone de alerta, o usuário é redirecionado para uma página de denúncia para reportar qualquer problema com aquele conteúdo, já no ícone de coração, caso esteja logado, o usuário pode salvar aquele meme como um favorito.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### Cadastro
 
-## Security Vulnerabilities
+O usuário pode se cadastrar na plataforma fornecendo seu nome, username, e-mail e senha. A senha é salva criptografada e os únicos dados disponíveis para outros usuários são o username e o avatar. O formulário passa por uma verificação que só permite o cadastro caso o username e o e-mail não tenham sido utilizados anteriormente, a senha seja maior do que 8 caracteres e seja idêntica à confirmação de senha.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### Login e Logout
 
-## License
+Após realizar o cadastro, o usuário pode realizar seu login fornecendo o e-mail e senha cadastrados. Quando logado, ele pode fazer o logout clicando no ícone presente no canto superior direito, na mesma posição em que o ícone de login fica disponível caso ele não esteja logado.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### Cadastro de Meme
+
+Quando logado, o usuário pode cadastrar novos memes ao clicar no ícone de "+" presente no centro da parte inferior do site. Na página de cadastro, o usuário preenche um pequeno formulário informando o link do YouTube contendo o vídeo do meme, o nome do meme (podendo ser diferente do cadastrado no YouTube) e o ano em que aquele meme surgiu.
+
+### Perfil
+
+Quando logado, é possível acessar a página de perfil clicando no ícone de usuário presente no canto inferior direito. Nela estão presentes informações do usuário como avatar, nome, username e ícone de edição. Ao clicar no ícone, o usuário é redirecionado para a página de edição, na qual ele pode alterar os seus dados e escolher um novo avatar de acordo com as opções pré-definidas. Na página de perfil, é possível encontrar também todos os memes cadastrados por aquele usuário e deletá-los ao clicar no ícone de lixeira em cada card.
+
+### Favoritos
+
+Na página de favoritos, disponível ao clicar no ícone de coração presente no canto inferior esquerdo, o usuário logado pode encontrar todos os memes que ele favoritou na plataforma. Para remover um meme dos favoritos, basta clicar novamente no ícone de coração vermelho em cada card.
+
+### Denúncia
+
+Ao clicar no ícone de denúncia presente em todos os memes publicados, o usuário é redirecionado para um formulário no qual ele pode selecionar os motivos pelos quais ele acredita que aquela publicação é inadequada ou, caso o motivo não esteja listado, ele pode descrevê-lo na caixa de texto. Todas as denúncias são anônimas, mesmo quando o usuário está logado, e são enviadas diretamente para o administrador para que ele tome as providências necessárias.
+
+### Informações
+
+No canto superior direito, está disponível um ícone de informações que leva para uma página contendo informações sobre a plataforma, seu conteúdo e como utilizá-la, além de informações sobre mim, a desenvolvedora, e as minhas redes sociais para nos conectarmos e conversarmos sobre esse e outros projetos.
+
+
+<h5 align="center">Obrigada por se interessar pelo projeto, divirta-se!</h5>
+
+
